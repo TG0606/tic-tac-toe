@@ -1,0 +1,29 @@
+
+body {
+  background-image: url("https://images.assetsdelivery.com/compings_v2/logvinyk/logvinyk1609/logvinyk160906442.jpg");
+  background-repeat: cover;
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+td {
+  border: 5px solid green;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
+
+table {
+  margin: 0 auto;
+  padding-top: 11%;
+}
+
+button {
+  border: 5px solid green;
+  font-size: 20px;
+  float:right;
+  margin: 20px;
+  padding: 5px;
+
+}
