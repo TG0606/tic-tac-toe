@@ -1,4 +1,3 @@
-console.log("working");
 
 let currentPlayer = 'X';
 
@@ -19,11 +18,17 @@ let currentPlayer = 'X';
 // };
 // document.querySelector('button').addEventListener('click', handleClick);
 
-// debugger
+//Congratulate the winner
+function congratulateWinner(player) {
+  setTimeout(function() {
+    alert("Congratulation! You won!");
+  }, 200);
+}
 
 // Get every TD tag from the page as an array of DOM nodes,
 // and save into the variable 'boxes'
 const boxes = document.querySelectorAll('td');
+
 
 // Loop over every DOM node in the boxes array,
 // and add an event listen function to each of them
@@ -40,8 +45,39 @@ for(let i = 0; i < boxes.length; i++ ) {
 
     console.log('clicked!', clickedBox.id );
 
+    // Set the box contents to show the player's symbol
+    clickedBox.innerText = currentPlayer;
 
-    clickedBox.innerHTML = currentPlayer;
+    // Has someone won the game
+
+    if( boxes[0].innerHTML === boxes[1].innerHTML && boxes[1].innerHTML === boxes[2].innerHTML && boxes[0].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+
+    else if( boxes[3].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[5].innerHTML && boxes[3].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+
+    else if( boxes[6].innerHTML === boxes[7].innerHTML && boxes[7].innerHTML === boxes[8].innerHTML && boxes[8].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+    else if( boxes[0].innerHTML === boxes[3].innerHTML && boxes[3].innerHTML === boxes[6].innerHTML && boxes[0].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+    else if( boxes[1].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[7].innerHTML && boxes[1].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+    else if( boxes[2].innerHTML === boxes[5].innerHTML && boxes[5].innerHTML === boxes[8].innerHTML && boxes[2].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+    else if( boxes[0].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[8].innerHTML && boxes[0].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+    else if( boxes[2].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[6].innerHTML && boxes[2].innerHTML === currentPlayer ) {
+      congratulateWinner(currentPlayer);
+    }
+
+
 
     // Swap the player from one to the other
     if( currentPlayer === 'X' ){
@@ -59,31 +95,37 @@ for(let i = 0; i < boxes.length; i++ ) {
 
 
 
-// document.querySelector('#td1').addEventListener('click',function(){
-//   console.log('clicked 1');
-// });
-// document.querySelector('#td2').addEventListener('click',function(){
-//   console.log('clicked 2');
-// });
-// document.querySelector('#td3').addEventListener('click',function(){
-//     console.log('clicked 3' );
-// });
-// document.querySelector('#td4').addEventListener('click',function(){
-//     console.log('clicked');
-// });
 //
-// document.querySelector('#td5').addEventListener('click',function(){
-//     console.log('clicked');
-// });
-// document.querySelector('#td6').addEventListener('click', function(){
-//     console.log('clicked');
-// });
-// document.querySelector('#td7').addEventListener('click', function(){
-//     console.log('clicked');
-// });
-// document.querySelector('#td8').addEventListener('click', function(){
-//     console.log('clicked');
-// });
-// document.querySelector('#td9').addEventListener('click', function(){
-//     console.log('clicked');
-// });
+// //
+//
+const poem ={
+
+  book1: {
+          author: "Robert Frost",
+          datePublished: 1916,
+          name: "The Road Not Taken",
+          famousLine: "Two road diverged in a yellow wood"
+        },
+
+  book2: {
+          author: "Will Frost",
+          datePublished: 1936,
+          name: "King",
+          famousLine: "Wonderful Wonderful"
+          }
+
+};
+//
+//
+// console.log(poem.famousLine);
+//
+// poem.book1.author;
+//
+//
+// poem['book1']['author'];
+///
+// console.log('book1', poem.book1);
+// ////
+// for(const key in poem.book1) {
+//   console.log( key, poem.book1[key] );
+// }
