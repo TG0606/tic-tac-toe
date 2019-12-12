@@ -3,9 +3,13 @@ let currentPlayer = 'X';
 
 let boxesfilled = 0;
 
+let allowClicking = 'yes';
+
 //Congratulate the winner
 
 function congratulateWinner() {
+
+  allowClicking = 'no';
 
   const green = document.querySelector('.firstColor');
 
@@ -25,7 +29,7 @@ function congratulateWinner() {
 
     boxesfilled = 0;
 
-  }, 1100);
+  }, 900);
 
   setTimeout(function() {
 
@@ -53,9 +57,14 @@ for(let i = 0; i < boxes.length; i++ ) {
 
       return; //exit function if the box is not empty
 
-    } else {
+    } else if(allowClicking === 'yes') {
 
       this.innerHTML = currentPlayer;
+
+    } else {
+
+      return;
+
     }
 
     const b0 = boxes[0].innerHTML, b1 = boxes[1].innerHTML, b2 = boxes[2].innerHTML, b3 = boxes[3].innerHTML, b4 = boxes[4].innerHTML,b5 = boxes[5].innerHTML,b6 = boxes[6].innerHTML, b7 = boxes[7].innerHTML, b8 = boxes[8].innerHTML;
@@ -76,6 +85,7 @@ for(let i = 0; i < boxes.length; i++ ) {
       congratulateWinner(currentPlayer);
 
       return;
+
     }
 
     //Check for the draw
@@ -142,6 +152,7 @@ const clearBoard = function(){
     boxes[i].innerHTML = '';
 
   }
+    allowClicking = 'yes';
 
 };
 
