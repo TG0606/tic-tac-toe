@@ -1,14 +1,18 @@
 
 let currentPlayer = 'X';
+
 let boxesfilled = 0;
 
 //Congratulate the winner
 
 function congratulateWinner() {
-  // debugger;
+
   const green = document.querySelector('.firstColor');
+
   const black = document.querySelector('.secondColor');
+
   const white = document.querySelector('.thirdColor');
+
   setTimeout(function() {
     green.innerHTML = `Congratulations! `
     black.innerHTML = `${currentPlayer} `
@@ -20,7 +24,7 @@ function congratulateWinner() {
   green.innerHTML = ` `;
   black.innerHTML = ` `;
   white.innerHTML = ` `;
-},2300);
+  },2300);
 }
 
 // Get all td tags from the DOM and save as a variable 'boxes'
@@ -40,38 +44,20 @@ for(let i = 0; i < boxes.length; i++ ) {
       this.innerHTML = currentPlayer;
     }
 
+    const b0 = boxes[0].innerHTML, b1 = boxes[1].innerHTML, b2 = boxes[2].innerHTML, b3 = boxes[3].innerHTML, b4 = boxes[4].innerHTML,b5 = boxes[5].innerHTML,b6 = boxes[6].innerHTML, b7 = boxes[7].innerHTML, b8 = boxes[8].innerHTML;
+
     // Check who wins the game
-    if( boxes[0].innerHTML === boxes[1].innerHTML && boxes[1].innerHTML === boxes[2].innerHTML && boxes[0].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
+    if(
+      ( b0 === b1 && b1 === b2 && b0 === currentPlayer ) ||
+      ( b3 === b4 && b4 === b5 && b3 === currentPlayer ) ||
+      ( b6 === b7 && b7 === b8 && b8 === currentPlayer ) ||
+      ( b0 === b3 && b3 === b6 && b0 === currentPlayer ) ||
+      ( b1 === b4 && b4 === b7 && b1 === currentPlayer ) ||
+      ( b2 === b5 && b5 === b8 && b2 === currentPlayer ) ||
+      ( b0 === b4 && b4 === b8 && b0 === currentPlayer ) ||
+      ( b2 === b4 && b4 === b6 && b2 === currentPlayer )
 
-    else if( boxes[3].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[5].innerHTML && boxes[3].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-
-    else if( boxes[6].innerHTML === boxes[7].innerHTML && boxes[7].innerHTML === boxes[8].innerHTML && boxes[8].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-    else if( boxes[0].innerHTML === boxes[3].innerHTML && boxes[3].innerHTML === boxes[6].innerHTML && boxes[0].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-    else if( boxes[1].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[7].innerHTML && boxes[1].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-    else if( boxes[2].innerHTML === boxes[5].innerHTML && boxes[5].innerHTML === boxes[8].innerHTML && boxes[2].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-    else if( boxes[0].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[8].innerHTML && boxes[0].innerHTML === currentPlayer ) {
-      congratulateWinner(currentPlayer);
-      return;
-    }
-    else if( boxes[2].innerHTML === boxes[4].innerHTML && boxes[4].innerHTML === boxes[6].innerHTML && boxes[2].innerHTML === currentPlayer ) {
+    ){
       congratulateWinner(currentPlayer);
       return;
     }
@@ -112,6 +98,7 @@ const restart = document.querySelector('#playAgain');
 
 //clear the board
 const clearBoard = function(){
+
   for ( let i = 0; i < boxes.length; i ++ ) {
 
     boxes[i].innerHTML = '';
@@ -124,42 +111,3 @@ restart.addEventListener('click', function(){
 clearBoard();
 
 });
-
-
-
-
-
-//
-// //
-//
-// const poem ={
-//
-//   book1: {
-//           author: "Robert Frost",
-//           datePublished: 1916,
-//           name: "The Road Not Taken",
-//           famousLine: "Two road diverged in a yellow wood"
-//         },
-//
-//   book2: {
-//           author: "Will Frost",
-//           datePublished: 1936,
-//           name: "King",
-//           famousLine: "Wonderful Wonderful"
-//           }
-//
-// };
-// //
-//
-// console.log(poem.famousLine);
-//
-// poem.book1.author;
-//
-//
-// poem['book1']['author'];
-///
-// console.log('book1', poem.book1);
-// ////
-// for(const key in poem.book1) {
-//   console.log( key, poem.book1[key] );
-// }
