@@ -14,18 +14,30 @@ function congratulateWinner() {
   const white = document.querySelector('.thirdColor');
 
   setTimeout(function() {
-    green.innerHTML = `Congratulations! `
-    black.innerHTML = `${currentPlayer} `
-    white.innerHTML = `won!`
+
+    green.innerHTML = `Congratulations! `;
+
+    black.innerHTML = `${currentPlayer} `;
+
+    white.innerHTML = `won!`;
+
     clearBoard();
+
     boxesfilled = 0;
-  }, 1000);
+
+  }, 1100);
+
   setTimeout(function() {
+
   green.innerHTML = ` `;
+
   black.innerHTML = ` `;
+
   white.innerHTML = ` `;
-  },2300);
-}
+
+  },2600);
+
+};
 
 // Get all td tags from the DOM and save as a variable 'boxes'
 const boxes = document.querySelectorAll('td');
@@ -34,13 +46,15 @@ const boxes = document.querySelectorAll('td');
 for(let i = 0; i < boxes.length; i++ ) {
 
 // Add an event listen function to each of them
-  boxes[i].addEventListener('click', function(){
+    boxes[i].addEventListener('click', function() {
 
 // Check if box is empty before trying to write in it
+    if (this.innerHTML !== "") {
 
-    if (this.innerHTML !== ""){
-      return; //exit function if the tile is not empty
-    }else{
+      return; //exit function if the box is not empty
+
+    } else {
+
       this.innerHTML = currentPlayer;
     }
 
@@ -57,46 +71,70 @@ for(let i = 0; i < boxes.length; i++ ) {
       ( b0 === b4 && b4 === b8 && b0 === currentPlayer ) ||
       ( b2 === b4 && b4 === b6 && b2 === currentPlayer )
 
-    ){
+    ) {
+
       congratulateWinner(currentPlayer);
+
       return;
     }
 
-//Check for the draw
+    //Check for the draw
     boxesfilled++;
+
     if (boxesfilled === 9) {
-      const green = document.querySelectorAll('.firstColor')[1];
+
+      const green = document.querySelectorAll('.firstColor')[1]; // Different color text
+
       const black = document.querySelectorAll('.secondColor')[1];
+
       const white = document.querySelectorAll('.thirdColor')[1];
+
       setTimeout(function() {
-        green.innerHTML = `It's `
-        black.innerHTML = `a `
-        white.innerHTML = `draw`
+
+        green.innerHTML = `It's `;
+
+        black.innerHTML = `a `;
+
+        white.innerHTML = `draw`;
+
         clearBoard();
+
         boxesfilled = 0;
-      }, 1000);
+
+      }, 1100);
+
       setTimeout(function() {
+
       green.innerHTML = ` `;
+
       black.innerHTML = ` `;
+
       white.innerHTML = ` `;
-    },2300);
+
+    },2600);
+
       return;
+
     }
 
     // Change the player from one to the other
     if( currentPlayer === 'X' ){
+
       currentPlayer = 'O';
+
     } else {
+
       currentPlayer = 'X'; // It was 'O', so change to 'X'
+
     }
 
-  });
+  }); // End of event listener
 
-} // end of for loop
+} // End of for loop
 
 const restart = document.querySelector('#playAgain');
 
-//clear the board
+// Clear the board
 const clearBoard = function(){
 
   for ( let i = 0; i < boxes.length; i ++ ) {
@@ -104,6 +142,7 @@ const clearBoard = function(){
     boxes[i].innerHTML = '';
 
   }
+
 };
 
 restart.addEventListener('click', function(){
