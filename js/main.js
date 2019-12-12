@@ -111,7 +111,7 @@ for(let i = 0; i < boxes.length; i++ ) {
 
         boxesfilled = 0;
 
-      }, 1100);
+      }, 900);
 
       setTimeout(function() {
 
@@ -152,12 +152,16 @@ const clearBoard = function(){
     boxes[i].innerHTML = '';
 
   }
-    allowClicking = 'yes';
 
 };
 
 restart.addEventListener('click', function(){
 
 clearBoard();
+
+allowClicking = 'yes';
+
+boxesfilled = 0;
+
 
 });
