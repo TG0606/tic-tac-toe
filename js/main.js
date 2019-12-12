@@ -11,19 +11,19 @@ function congratulateWinner() {
 
   allowClicking = 'no';
 
-  const green = document.querySelector('.firstColor');
+  const colorOne = document.querySelector('.firstColor');
 
-  const black = document.querySelector('.secondColor');
+  const colorTwo = document.querySelector('.secondColor');
 
-  const white = document.querySelector('.thirdColor');
+  const colorThree = document.querySelector('.thirdColor');
 
   setTimeout(function() {
 
-    green.innerHTML = `Congratulations! `;
+    colorOne.innerHTML = `Congratulations! `;
 
-    black.innerHTML = `${currentPlayer} `;
+    colorTwo.innerHTML = `${currentPlayer} `;
 
-    white.innerHTML = `won!`;
+    colorThree.innerHTML = `won!`;
 
     clearBoard();
 
@@ -33,11 +33,11 @@ function congratulateWinner() {
 
   setTimeout(function() {
 
-  green.innerHTML = ` `;
+  colorOne.innerHTML = ` `;
 
-  black.innerHTML = ` `;
+  colorTwo.innerHTML = ` `;
 
-  white.innerHTML = ` `;
+  colorThree.innerHTML = ` `;
 
   },2600);
 
@@ -93,19 +93,19 @@ for(let i = 0; i < boxes.length; i++ ) {
 
     if (boxesfilled === 9) {
 
-      const green = document.querySelectorAll('.firstColor')[1]; // Different color text
+      const colorOne = document.querySelectorAll('.firstColor')[1]; // Different color text
 
-      const black = document.querySelectorAll('.secondColor')[1];
+      const colorTwo = document.querySelectorAll('.secondColor')[1];
 
-      const white = document.querySelectorAll('.thirdColor')[1];
+      const colorThree = document.querySelectorAll('.thirdColor')[1];
 
       setTimeout(function() {
 
-        green.innerHTML = `It's `;
+        colorOne.innerHTML = `It's `;
 
-        black.innerHTML = `a `;
+        colorTwo.innerHTML = `a `;
 
-        white.innerHTML = `draw`;
+        colorThree.innerHTML = `draw`;
 
         clearBoard();
 
@@ -115,11 +115,11 @@ for(let i = 0; i < boxes.length; i++ ) {
 
       setTimeout(function() {
 
-      green.innerHTML = ` `;
+      colorOne.innerHTML = ` `;
 
-      black.innerHTML = ` `;
+      colorTwo.innerHTML = ` `;
 
-      white.innerHTML = ` `;
+      colorThree.innerHTML = ` `;
 
     },2600);
 
