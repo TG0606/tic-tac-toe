@@ -79,9 +79,21 @@ for(let i = 0; i < boxes.length; i++ ) {
 //Check for the draw
     boxesfilled++;
     if (boxesfilled === 9) {
-      alert(`It's a draw!`);
-      clearBoard();
-      boxesfilled = 0;
+      const green = document.querySelectorAll('.firstColor')[1];
+      const black = document.querySelectorAll('.secondColor')[1];
+      const white = document.querySelectorAll('.thirdColor')[1];
+      setTimeout(function() {
+        green.innerHTML = `It's `
+        black.innerHTML = `a `
+        white.innerHTML = `draw`
+        clearBoard();
+        boxesfilled = 0;
+      }, 1000);
+      setTimeout(function() {
+      green.innerHTML = ` `;
+      black.innerHTML = ` `;
+      white.innerHTML = ` `;
+    },2300);
       return;
     }
 
