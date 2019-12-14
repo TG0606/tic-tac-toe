@@ -15,7 +15,7 @@ It is a draw if no one can win.
 
 IMAGE
 
-<img src="images/Tic-Tac-Toe.png" width="1300px" height="600px">
+<img src="images/Tic-Tac-Toe.png" width="1400px" height="500px">
 
 GETTING STARTED
 
