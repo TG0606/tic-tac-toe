@@ -6,7 +6,6 @@ let boxesfilled = 0;
 let allowClicking = 'yes';
 
 //Congratulate the winner
-
 function congratulateWinner() {
 
   allowClicking = 'no';
@@ -153,15 +152,14 @@ const clearBoard = function(){
 
   }
 
+  allowClicking = 'yes';
+
 };
 
 restart.addEventListener('click', function(){
 
 clearBoard();
 
-allowClicking = 'yes';
-
 boxesfilled = 0;
-
 
 });
