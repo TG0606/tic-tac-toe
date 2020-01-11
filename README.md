@@ -3,7 +3,7 @@
 
 Tic Tac Toe 
 
-HOW TO PLAY
+<h2>HOW TO PLAY</h2>
 
 Draw the board X or O.
 
@@ -13,15 +13,15 @@ Winning the game by getting a row of three symbols.
 
 It is a draw if no one can win. 
 
-IMAGE
+<h2>IMAGE</h2>
 
 <img src="images/Tic-Tac-Toe.png" width="1400px" height="500px">
 
-GETTING STARTED
+<h2>GETTING STARTED</h2>
 
 This is my first project. It was hard to begin with since I just started learning how to code two weeks ago. Writing down pseudo code helped me to break the process down into pieces, and allowed me to solve problems logically.  
 
-STEPS
+<h2>STEPS</h2>
 
 Created variables for winning combos.
 
@@ -45,7 +45,7 @@ Added restart button.
 
 Set up clearboard function to start new game automatically.
 
-TECHNOLOGIES USED
+<h2>TECHNOLOGIES USED</h2>
 
 HTML
 
@@ -53,7 +53,7 @@ CSS
 
 Javascript 
 
-PROJECT LINK
+<h2>PROJECT LINK<h2>
 
 https://tg0606.github.io/tic-tac-toe/
 
