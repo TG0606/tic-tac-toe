@@ -7,11 +7,11 @@ Tic Tac Toe
 
 <b>1.</b> Draw the board X or O.
 
-2. Each player takes turn.
+<b>2.</b> Each player takes turn.
 
-3. Winning the game by getting a row of three symbols. 
+<b>3.</b> Winning the game by getting a row of three symbols. 
 
-4. It is a draw if no one can win. 
+<b>4.</b> It is a draw if no one can win. 
 
 <h2>IMAGE</h2>
 
@@ -23,27 +23,27 @@ This is my first project. It was hard to begin with since I just started learnin
 
 <h2>STEPS</h2>
 
-1. Created variables for winning combos.
+<b>1.</b> Created variables for winning combos.
 
-2. Generated a for loop to go through each winning combo.
+<b>2.</b> Generated a for loop to go through each winning combo.
 
-3. Added event listeners for every winning combo.
+<b>3.</b> Added event listeners for every winning combo.
 
-4. Set up a conditional statement that not allow overwriting in the same boxes and stop writing in any boxes after completing the game.
+<b>4.</b> Set up a conditional statement that not allow overwriting in the same boxes and stop writing in any boxes after completing the game.
 
-5. Started an if statement to check who is the winner.
+<b>5.</b> Started an if statement to check who is the winner.
 
-6. Made an if statement to check for draw.
+<b>6.</b> Made an if statement to check for draw.
 
-7. Established the draw function.
+<b>7.</b> Established the draw function.
 
-8. Created winning message. 
+<b>8.</b> Created winning message. 
 
-9. Generated draw message.
+<b>9.</b> Generated draw message.
 
-10. Added restart button.
+<b>10.</b> Added restart button.
 
-11. Set up clearboard function to start new game automatically.
+<b>11.</b> Set up clearboard function to start new game automatically.
 
 <h2>TECHNOLOGIES USED</h2>
 
