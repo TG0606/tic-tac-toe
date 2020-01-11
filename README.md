@@ -5,13 +5,13 @@ Tic Tac Toe
 
 <h2>HOW TO PLAY</h2>
 
-Draw the board X or O.
+1. Draw the board X or O.
 
-Each player takes turn.
+2. Each player takes turn.
 
-Winning the game by getting a row of three symbols. 
+3. Winning the game by getting a row of three symbols. 
 
-It is a draw if no one can win. 
+4. It is a draw if no one can win. 
 
 <h2>IMAGE</h2>
 
@@ -23,27 +23,27 @@ This is my first project. It was hard to begin with since I just started learnin
 
 <h2>STEPS</h2>
 
-Created variables for winning combos.
+1. Created variables for winning combos.
 
-Generated a for loop to go through each winning combo.
+2. Generated a for loop to go through each winning combo.
 
-Added event listeners for every winning combo.
+3. Added event listeners for every winning combo.
 
-Set up a conditional statement that not allow overwriting in the same boxes and stop writing in any boxes after completing the game.
+4. Set up a conditional statement that not allow overwriting in the same boxes and stop writing in any boxes after completing the game.
 
-Started an if statement to check who is the winner.
+5. Started an if statement to check who is the winner.
 
-Made an if statement to check for draw.
+6. Made an if statement to check for draw.
 
-Established the draw function.
+7. Established the draw function.
 
-Created winning message. 
+8. Created winning message. 
 
-Generated draw message.
+9. Generated draw message.
 
-Added restart button.
+10. Added restart button.
 
-Set up clearboard function to start new game automatically.
+11. Set up clearboard function to start new game automatically.
 
 <h2>TECHNOLOGIES USED</h2>
 
