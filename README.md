@@ -5,7 +5,7 @@ Tic Tac Toe
 
 <h2>HOW TO PLAY</h2>
 
-1. Draw the board X or O.
+<bold>1.</bold> Draw the board X or O.
 
 2. Each player takes turn.
 
