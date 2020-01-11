@@ -1,5 +1,5 @@
 
-PROJECT TITLE
+<h1>PROJECT TITLE</h1>
 
 Tic Tac Toe 
 
