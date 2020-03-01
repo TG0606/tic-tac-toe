@@ -47,11 +47,13 @@ This is my first project. It was hard to begin with since I just started learnin
 
 <h2>TECHNOLOGIES USED</h2>
 
-HTML
+<b>1.</b> HTML
 
-CSS
+<b>2.</b> CSS
 
-Javascript
+<b>3.</b> Javascript
+
+<b>4.</b> jQuery 
 
 <h2>PROJECT LINK<h2>
 
