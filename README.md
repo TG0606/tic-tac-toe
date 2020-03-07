@@ -15,7 +15,7 @@ Tic Tac Toe
 
 <h2>IMAGE</h2>
 
-<img src="images/Tic-Tac-Toe.png" width="1400px" height="500px">
+<img src="images/p4.png" width="1400px" height="500px">
 
 <h2>GETTING STARTED</h2>
 
@@ -53,7 +53,7 @@ This is my first project. It was hard to begin with since I just started learnin
 
 <b>3.</b> Javascript
 
-<b>4.</b> jQuery 
+<b>4.</b> jQuery
 
 <h2>PROJECT LINK<h2>
 
